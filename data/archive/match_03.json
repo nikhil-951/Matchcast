@@ -1,0 +1,93 @@
+{
+  "match_id": "match_03",
+  "home_team": "Ironwall FC",
+  "away_team": "Phoenix Athletic",
+  "home_formation": "5-3-2",
+  "away_formation": "4-3-3",
+  "events": [
+    {
+      "event_id": "m3_01",
+      "minute": 8,
+      "second": 15,
+      "type": "tackle",
+      "subtype": "defensive_duel",
+      "team": "Ironwall FC",
+      "player": "Ethan Tarkowski",
+      "position": {"x": 22.0, "y": 48.0},
+      "success": true
+    },
+    {
+      "event_id": "m3_02",
+      "minute": 19,
+      "second": 40,
+      "type": "card",
+      "subtype": "yellow",
+      "team": "Phoenix Athletic",
+      "player": "Bruno Guimaraes",
+      "position": {"x": 58.0, "y": 62.0},
+      "outcome": "booked"
+    },
+    {
+      "event_id": "m3_03",
+      "minute": 34,
+      "second": 10,
+      "type": "shot",
+      "subtype": "direct_free_kick",
+      "team": "Phoenix Athletic",
+      "player": "Alexander Isak",
+      "position": {"x": 78.0, "y": 50.0},
+      "success": true,
+      "xG": 0.08,
+      "outcome": "saved"
+    },
+    {
+      "event_id": "m3_04",
+      "minute": 52,
+      "second": 20,
+      "type": "shot",
+      "subtype": "open_play",
+      "team": "Ironwall FC",
+      "player": "Dominic Calvert-Lewin",
+      "position": {"x": 92.0, "y": 50.0},
+      "success": true,
+      "xG": 0.38,
+      "outcome": "saved",
+      "body_part": "head"
+    },
+    {
+      "event_id": "m3_05",
+      "minute": 64,
+      "second": 30,
+      "type": "card",
+      "subtype": "yellow",
+      "team": "Ironwall FC",
+      "player": "James Tarkowski",
+      "position": {"x": 30.0, "y": 50.0},
+      "outcome": "booked"
+    },
+    {
+      "event_id": "m3_06",
+      "minute": 79,
+      "second": 15,
+      "type": "shot",
+      "subtype": "open_play",
+      "team": "Phoenix Athletic",
+      "player": "Anthony Gordon",
+      "position": {"x": 86.0, "y": 30.0},
+      "success": true,
+      "xG": 0.24,
+      "outcome": "saved"
+    },
+    {
+      "event_id": "m3_07",
+      "minute": 88,
+      "second": 40,
+      "type": "pressure",
+      "subtype": "low_block_clearance",
+      "team": "Ironwall FC",
+      "player": "Jarrad Branthwaite",
+      "position": {"x": 16.0, "y": 48.0},
+      "success": true
+    }
+  ]
+}

@@ -1,0 +1,565 @@
+{
+  "match_id": "synthetic_derby",
+  "home_team": "Apex United",
+  "away_team": "Titan City",
+  "home_formation": "4-3-3",
+  "away_formation": "4-2-3-1",
+  "events": [
+    {
+      "event_id": "ev_001",
+      "minute": 1,
+      "second": 12,
+      "type": "pass",
+      "subtype": "open_play",
+      "team": "Apex United",
+      "player": "Marcus Sorenson",
+      "player_number": 6,
+      "position": {
+        "x": 35.0,
+        "y": 48.0
+      },
+      "end_position": {
+        "x": 52.0,
+        "y": 78.0
+      },
+      "recipient": "Kai Vance",
+      "success": true,
+      "under_pressure": false,
+      "progressive": true
+    },
+    {
+      "event_id": "ev_002",
+      "minute": 2,
+      "second": 5,
+      "type": "pressure",
+      "subtype": "high_press",
+      "team": "Titan City",
+      "player": "Leo Mercer",
+      "player_number": 9,
+      "position": {
+        "x": 72.0,
+        "y": 45.0
+      },
+      "success": true,
+      "under_pressure": false
+    },
+    {
+      "event_id": "ev_003",
+      "minute": 3,
+      "second": 18,
+      "type": "pass",
+      "subtype": "open_play",
+      "team": "Apex United",
+      "player": "Kai Vance",
+      "player_number": 7,
+      "position": {
+        "x": 68.0,
+        "y": 82.0
+      },
+      "end_position": {
+        "x": 84.0,
+        "y": 72.0
+      },
+      "recipient": "Dominic Drake",
+      "success": true,
+      "under_pressure": true,
+      "progressive": true
+    },
+    {
+      "event_id": "ev_004",
+      "minute": 5,
+      "second": 40,
+      "type": "shot",
+      "subtype": "open_play",
+      "team": "Apex United",
+      "player": "Dominic Drake",
+      "player_number": 9,
+      "position": {
+        "x": 86.0,
+        "y": 44.0
+      },
+      "success": true,
+      "xG": 0.18,
+      "outcome": "saved",
+      "body_part": "right_foot",
+      "under_pressure": true
+    },
+    {
+      "event_id": "ev_005",
+      "minute": 8,
+      "second": 22,
+      "type": "pressure",
+      "subtype": "counter_press",
+      "team": "Apex United",
+      "player": "Marcus Sorenson",
+      "player_number": 6,
+      "position": {
+        "x": 68.0,
+        "y": 42.0
+      },
+      "success": true,
+      "under_pressure": false
+    },
+    {
+      "event_id": "ev_006",
+      "minute": 8,
+      "second": 35,
+      "type": "pressure",
+      "subtype": "counter_press",
+      "team": "Apex United",
+      "player": "Oliver Hayes",
+      "player_number": 8,
+      "position": {
+        "x": 70.0,
+        "y": 46.0
+      },
+      "success": true,
+      "under_pressure": false
+    },
+    {
+      "event_id": "ev_007",
+      "minute": 9,
+      "second": 10,
+      "type": "pressure",
+      "subtype": "counter_press",
+      "team": "Apex United",
+      "player": "Kai Vance",
+      "player_number": 7,
+      "position": {
+        "x": 74.0,
+        "y": 50.0
+      },
+      "success": true,
+      "under_pressure": false
+    },
+    {
+      "event_id": "ev_008",
+      "minute": 12,
+      "second": 15,
+      "type": "pass",
+      "subtype": "open_play",
+      "team": "Titan City",
+      "player": "Lucas Silva",
+      "player_number": 10,
+      "position": {
+        "x": 42.0,
+        "y": 50.0
+      },
+      "end_position": {
+        "x": 65.0,
+        "y": 25.0
+      },
+      "recipient": "Nico Ramos",
+      "success": true,
+      "progressive": true
+    },
+    {
+      "event_id": "ev_009",
+      "minute": 15,
+      "second": 45,
+      "type": "pass",
+      "subtype": "cross",
+      "team": "Titan City",
+      "player": "Nico Ramos",
+      "player_number": 11,
+      "position": {
+        "x": 85.0,
+        "y": 18.0
+      },
+      "end_position": {
+        "x": 92.0,
+        "y": 50.0
+      },
+      "recipient": "Leo Mercer",
+      "success": true,
+      "additional": {
+        "assist_type": "cross"
+      }
+    },
+    {
+      "event_id": "ev_010",
+      "minute": 16,
+      "second": 2,
+      "type": "shot",
+      "subtype": "open_play",
+      "team": "Titan City",
+      "player": "Leo Mercer",
+      "player_number": 9,
+      "position": {
+        "x": 91.0,
+        "y": 50.0
+      },
+      "success": false,
+      "xG": 0.28,
+      "outcome": "off_target",
+      "body_part": "head",
+      "under_pressure": true
+    },
+    {
+      "event_id": "ev_011",
+      "minute": 22,
+      "second": 40,
+      "type": "pass",
+      "subtype": "through_ball",
+      "team": "Apex United",
+      "player": "Oliver Hayes",
+      "player_number": 8,
+      "position": {
+        "x": 72.0,
+        "y": 52.0
+      },
+      "end_position": {
+        "x": 89.0,
+        "y": 48.0
+      },
+      "recipient": "Dominic Drake",
+      "success": true,
+      "progressive": true,
+      "additional": {
+        "assist_type": "through_ball"
+      }
+    },
+    {
+      "event_id": "ev_012",
+      "minute": 23,
+      "second": 4,
+      "type": "goal",
+      "subtype": "open_play",
+      "team": "Apex United",
+      "player": "Dominic Drake",
+      "player_number": 9,
+      "position": {
+        "x": 91.0,
+        "y": 49.0
+      },
+      "success": true,
+      "xG": 0.58,
+      "outcome": "goal",
+      "body_part": "right_foot",
+      "under_pressure": false
+    },
+    {
+      "event_id": "ev_013",
+      "minute": 28,
+      "second": 14,
+      "type": "pass",
+      "subtype": "open_play",
+      "team": "Titan City",
+      "player": "Mateo Rossi",
+      "player_number": 4,
+      "position": {
+        "x": 28.0,
+        "y": 35.0
+      },
+      "end_position": {
+        "x": 48.0,
+        "y": 40.0
+      },
+      "recipient": "Lucas Silva",
+      "success": true
+    },
+    {
+      "event_id": "ev_014",
+      "minute": 34,
+      "second": 20,
+      "type": "foul",
+      "subtype": "tactical_foul",
+      "team": "Titan City",
+      "player": "Mateo Rossi",
+      "player_number": 4,
+      "position": {
+        "x": 55.0,
+        "y": 62.0
+      },
+      "success": false
+    },
+    {
+      "event_id": "ev_015",
+      "minute": 34,
+      "second": 45,
+      "type": "card",
+      "subtype": "yellow",
+      "team": "Titan City",
+      "player": "Mateo Rossi",
+      "player_number": 4,
+      "position": {
+        "x": 55.0,
+        "y": 62.0
+      },
+      "outcome": "booked"
+    },
+    {
+      "event_id": "ev_016",
+      "minute": 41,
+      "second": 15,
+      "type": "shot",
+      "subtype": "open_play",
+      "team": "Apex United",
+      "player": "Kai Vance",
+      "player_number": 7,
+      "position": {
+        "x": 92.0,
+        "y": 44.0
+      },
+      "success": true,
+      "xG": 0.44,
+      "outcome": "post",
+      "body_part": "left_foot",
+      "under_pressure": false
+    },
+    {
+      "event_id": "ev_017",
+      "minute": 45,
+      "second": 0,
+      "type": "pass",
+      "subtype": "open_play",
+      "team": "Titan City",
+      "player": "Lucas Silva",
+      "player_number": 10,
+      "position": {
+        "x": 50.0,
+        "y": 50.0
+      },
+      "end_position": {
+        "x": 50.0,
+        "y": 20.0
+      },
+      "recipient": "Nico Ramos",
+      "success": true
+    },
+    {
+      "event_id": "ev_018",
+      "minute": 49,
+      "second": 30,
+      "type": "pass",
+      "subtype": "open_play",
+      "team": "Titan City",
+      "player": "Lucas Silva",
+      "player_number": 10,
+      "position": {
+        "x": 62.0,
+        "y": 45.0
+      },
+      "end_position": {
+        "x": 82.0,
+        "y": 30.0
+      },
+      "recipient": "Nico Ramos",
+      "success": true,
+      "progressive": true
+    },
+    {
+      "event_id": "ev_019",
+      "minute": 52,
+      "second": 10,
+      "type": "shot",
+      "subtype": "open_play",
+      "team": "Titan City",
+      "player": "Lucas Silva",
+      "player_number": 10,
+      "position": {
+        "x": 82.0,
+        "y": 48.0
+      },
+      "success": true,
+      "xG": 0.14,
+      "outcome": "saved",
+      "body_part": "right_foot"
+    },
+    {
+      "event_id": "ev_020",
+      "minute": 55,
+      "second": 22,
+      "type": "pressure",
+      "subtype": "high_press",
+      "team": "Titan City",
+      "player": "Leo Mercer",
+      "player_number": 9,
+      "position": {
+        "x": 78.0,
+        "y": 55.0
+      },
+      "success": true
+    },
+    {
+      "event_id": "ev_021",
+      "minute": 55,
+      "second": 50,
+      "type": "pressure",
+      "subtype": "high_press",
+      "team": "Titan City",
+      "player": "Lucas Silva",
+      "player_number": 10,
+      "position": {
+        "x": 80.0,
+        "y": 48.0
+      },
+      "success": true
+    },
+    {
+      "event_id": "ev_022",
+      "minute": 56,
+      "second": 15,
+      "type": "pressure",
+      "subtype": "high_press",
+      "team": "Titan City",
+      "player": "Nico Ramos",
+      "player_number": 11,
+      "position": {
+        "x": 76.0,
+        "y": 40.0
+      },
+      "success": true
+    },
+    {
+      "event_id": "ev_023",
+      "minute": 66,
+      "second": 30,
+      "type": "pass",
+      "subtype": "cutback",
+      "team": "Titan City",
+      "player": "Nico Ramos",
+      "player_number": 11,
+      "position": {
+        "x": 92.0,
+        "y": 25.0
+      },
+      "end_position": {
+        "x": 86.0,
+        "y": 48.0
+      },
+      "recipient": "Leo Mercer",
+      "success": true,
+      "additional": {
+        "assist_type": "cutback"
+      }
+    },
+    {
+      "event_id": "ev_024",
+      "minute": 67,
+      "second": 12,
+      "type": "goal",
+      "subtype": "open_play",
+      "team": "Titan City",
+      "player": "Leo Mercer",
+      "player_number": 9,
+      "position": {
+        "x": 88.0,
+        "y": 50.0
+      },
+      "success": true,
+      "xG": 0.48,
+      "outcome": "goal",
+      "body_part": "right_foot",
+      "under_pressure": false
+    },
+    {
+      "event_id": "ev_025",
+      "minute": 77,
+      "second": 45,
+      "type": "foul",
+      "subtype": "penalty_foul",
+      "team": "Titan City",
+      "player": "Mateo Rossi",
+      "player_number": 4,
+      "position": {
+        "x": 88.0,
+        "y": 46.0
+      },
+      "success": false
+    },
+    {
+      "event_id": "ev_026",
+      "minute": 78,
+      "second": 10,
+      "type": "card",
+      "subtype": "second_yellow",
+      "team": "Titan City",
+      "player": "Mateo Rossi",
+      "player_number": 4,
+      "position": {
+        "x": 88.0,
+        "y": 46.0
+      },
+      "outcome": "sent_off"
+    },
+    {
+      "event_id": "ev_027",
+      "minute": 78,
+      "second": 40,
+      "type": "shot",
+      "subtype": "penalty",
+      "team": "Apex United",
+      "player": "Dominic Drake",
+      "player_number": 9,
+      "position": {
+        "x": 88.0,
+        "y": 50.0
+      },
+      "success": true,
+      "xG": 0.76,
+      "outcome": "goal",
+      "body_part": "right_foot"
+    },
+    {
+      "event_id": "ev_028",
+      "minute": 85,
+      "second": 20,
+      "type": "pass",
+      "subtype": "open_play",
+      "team": "Apex United",
+      "player": "Marcus Sorenson",
+      "player_number": 6,
+      "position": {
+        "x": 58.0,
+        "y": 50.0
+      },
+      "end_position": {
+        "x": 80.0,
+        "y": 70.0
+      },
+      "recipient": "Kai Vance",
+      "success": true,
+      "progressive": true
+    },
+    {
+      "event_id": "ev_029",
+      "minute": 88,
+      "second": 15,
+      "type": "shot",
+      "subtype": "open_play",
+      "team": "Apex United",
+      "player": "Kai Vance",
+      "player_number": 7,
+      "position": {
+        "x": 85.0,
+        "y": 62.0
+      },
+      "success": true,
+      "xG": 0.38,
+      "outcome": "goal",
+      "body_part": "left_foot",
+      "under_pressure": false
+    },
+    {
+      "event_id": "ev_030",
+      "minute": 90,
+      "second": 30,
+      "type": "pass",
+      "subtype": "open_play",
+      "team": "Apex United",
+      "player": "Oliver Hayes",
+      "player_number": 8,
+      "position": {
+        "x": 45.0,
+        "y": 50.0
+      },
+      "end_position": {
+        "x": 30.0,
+        "y": 50.0
+      },
+      "recipient": "Marcus Sorenson",
+      "success": true
+    }
+  ]
+}
