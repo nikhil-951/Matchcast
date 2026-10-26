@@ -139,6 +139,6 @@ generator → replay engine → Data Agent (deterministic metrics, key moments)
 
 ## Submission checklist
 - [x] Public GitHub repo, no secrets committed
-- [ ] Demo video under 2 minutes (add link here)
+- [x] Demo video under 2 minutes (https://youtu.be/vzoDzdMWAag?si=yObVy5Vmy62gImto)
 - [x] Project pitch and architecture description
 - [x] Live Azure deployment operational with health endpoint verification
