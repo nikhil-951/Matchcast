@@ -146,6 +146,7 @@ export interface MatchEvent {
   sub_on?: string;
   sub_off?: string;
   recipient?: string;
+  success?: boolean;
   xG?: number;
   additional?: Record<string, any>;
 }

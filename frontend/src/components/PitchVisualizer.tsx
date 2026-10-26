@@ -451,7 +451,7 @@ export const PitchVisualizer: React.FC<PitchVisualizerProps> = React.memo(({
       const start = mapCoords(ev.position, ev.team);
       const end = mapCoords(ev.end_position, ev.team);
       const opacity = 0.12 + (idx / Math.max(1, valid.length)) * 0.38;
-      const isHome = ev.team === 'home' || (ev.team && ev.team.toLowerCase() === homeTeam.toLowerCase());
+      const isHome: boolean = Boolean(ev.team === 'home' || (ev.team && ev.team.toLowerCase() === homeTeam.toLowerCase()));
       const color = ev.type === 'shot' ? '#38bdf8' : isHome ? '#B8F34A' : '#f59e0b';
       return { id: `${ev.event_id || idx}-${idx}`, start, end, opacity, color, isShot: ev.type === 'shot' };
     });
@@ -471,7 +471,7 @@ export const PitchVisualizer: React.FC<PitchVisualizerProps> = React.memo(({
     const distinctPlayers = new Map<string, { team: string; isHome: boolean; number?: number | null }>();
     squadEventsSource.forEach((ev) => {
       if (!ev.player || distinctPlayers.has(ev.player)) return;
-      const isHome = ev.team === 'home' || (ev.team && ev.team.toLowerCase() === homeTeam.toLowerCase());
+      const isHome: boolean = Boolean(ev.team === 'home' || (ev.team && ev.team.toLowerCase() === homeTeam.toLowerCase()));
       const num = (ev as any).player_number ?? ev.additional?.player_number ?? null;
       distinctPlayers.set(ev.player, {
         team: isHome ? homeTeam : awayTeam,
@@ -522,7 +522,7 @@ export const PitchVisualizer: React.FC<PitchVisualizerProps> = React.memo(({
   const isHomePossession = useMemo(() => {
     if (!events || events.length === 0) {
       if (!lastEvent) return true;
-      return lastEvent.team === 'home' || (lastEvent.team && lastEvent.team.toLowerCase() === homeTeam.toLowerCase());
+      return Boolean(lastEvent.team === 'home' || (lastEvent.team && lastEvent.team.toLowerCase() === homeTeam.toLowerCase()));
     }
     const nonPossessionTypes = new Set(['pressure', 'foul', 'yellow_card', 'red_card', 'card', 'offside']);
     for (let i = events.length - 1; i >= 0; i--) {
@@ -530,7 +530,7 @@ export const PitchVisualizer: React.FC<PitchVisualizerProps> = React.memo(({
       if (!ev) continue;
       if (nonPossessionTypes.has(ev.type)) continue;
       if (ev.type === 'tackle' && ev.outcome !== 'won' && ev.outcome !== 'success') continue;
-      const isHome = ev.team === 'home' || (ev.team && ev.team.toLowerCase() === homeTeam.toLowerCase());
+      const isHome: boolean = Boolean(ev.team === 'home' || (ev.team && ev.team.toLowerCase() === homeTeam.toLowerCase()));
       return isHome;
     }
     return true;
@@ -644,7 +644,7 @@ export const PitchVisualizer: React.FC<PitchVisualizerProps> = React.memo(({
     const rawAway = computeAwaySide(ballX, ballY, !isHomePossession);
 
     const home = homeSquad.map((p) => {
-      const pos = rawHome[p.key] || { x: 50, y: 34 };
+      const pos = (rawHome as Record<string, { x: number; y: number }>)[p.key] || { x: 50, y: 34 };
       const isFavorite = !!(favoritePlayer && (favoritePlayer === p.name || p.name.includes(favoritePlayer)));
       return {
         ...p,
@@ -659,7 +659,7 @@ export const PitchVisualizer: React.FC<PitchVisualizerProps> = React.memo(({
     });
 
     const away = awaySquad.map((p) => {
-      const pos = rawAway[p.key] || { x: 50, y: 34 };
+      const pos = (rawAway as Record<string, { x: number; y: number }>)[p.key] || { x: 50, y: 34 };
       const isFavorite = !!(favoritePlayer && (favoritePlayer === p.name || p.name.includes(favoritePlayer)));
       return {
         ...p,
@@ -678,18 +678,18 @@ export const PitchVisualizer: React.FC<PitchVisualizerProps> = React.memo(({
       let carrier = home.find((p) => p.name === carrierName);
       // Hard safeguard: Goalkeeper CANNOT carry ball outside defensive 18-yard box!
       if (carrier && carrier.role === 'GK' && ballX > 16.5) {
-        carrier = null;
+        carrier = undefined;
       }
       // Tactical safeguard: Fullbacks & Center Backs cannot cross into opposite touchlines
       // Home: LB is top (y < 34), RB is bottom (y >= 34)
       if (carrier && carrier.role === 'LB' && ballY > 36.0) {
-        carrier = null;
+        carrier = undefined;
       }
       if (carrier && carrier.role === 'RB' && ballY < 32.0) {
-        carrier = null;
+        carrier = undefined;
       }
       if (carrier && carrier.role === 'CB' && ballX > 75.0 && (ballY < 18.0 || ballY > 50.0)) {
-        carrier = null;
+        carrier = undefined;
       }
       if (!carrier) {
         const initialCandidate = home.find(
@@ -756,17 +756,17 @@ export const PitchVisualizer: React.FC<PitchVisualizerProps> = React.memo(({
     } else {
       let carrier = away.find((p) => p.name === carrierName);
       if (carrier && carrier.role === 'GK' && ballX < 88.5) {
-        carrier = null;
+        carrier = undefined;
       }
       // Away: RB is top (y < 34), LB is bottom (y >= 34)
       if (carrier && carrier.role === 'RB' && ballY > 36.0) {
-        carrier = null;
+        carrier = undefined;
       }
       if (carrier && carrier.role === 'LB' && ballY < 32.0) {
-        carrier = null;
+        carrier = undefined;
       }
       if (carrier && carrier.role === 'CB' && ballX < 30.0 && (ballY < 18.0 || ballY > 50.0)) {
-        carrier = null;
+        carrier = undefined;
       }
       if (!carrier) {
         const initialCandidate = away.find(
@@ -1091,8 +1091,8 @@ function computeTacticalPlayerPos(
       (e) => e.type === 'pass' || e.type === 'cross' || e.type === 'through_ball' || e.type === 'free_kick'
     );
     const completedPasses = passEvents.filter((e) => {
-      if (e.success === false) return false;
-      if (e.success === true) return true;
+      if ((e as any).success === false) return false;
+      if ((e as any).success === true) return true;
       const oc = (e.outcome || '').toLowerCase();
       if (oc === 'failed' || oc === 'incomplete' || oc === 'intercepted' || oc === 'blocked' || oc === 'out') return false;
       return true;
