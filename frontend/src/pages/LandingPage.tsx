@@ -172,15 +172,8 @@ export const LandingPage: React.FC = () => {
 
       {/* Footer */}
       <footer className="w-full border-t border-slate-200 dark:border-[#3D195B]/40 py-6 px-4 text-center text-xs text-slate-500 dark:text-gray-500">
-        <div className="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-3">
+        <div className="max-w-7xl mx-auto flex items-center justify-center">
           <span>MatchCast AI — Independent Sports Telemetry &amp; AI Punditry Studio</span>
-          <div className="flex items-center gap-4 text-slate-500 dark:text-gray-400">
-            <Link to="/matches" className="hover:text-[#3D195B] dark:hover:text-[#B8F34A] transition-colors">
-              Match Dashboard
-            </Link>
-            <span>•</span>
-            <span className="font-mono text-[10px]">Azure F1 Free Tier Hosted</span>
-          </div>
         </div>
       </footer>
     </div>
