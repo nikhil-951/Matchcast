@@ -6,11 +6,11 @@ Built for the Microsoft x Premier League **"Inside the Game" Developer Hackathon
 
 ---
 
-## What it does (the five-stage pipeline)
+## What it does (the seven-stage pipeline)
 
 | Stage | What MatchCast does | Where |
 |---|---|---|
-| **1. Ingest** | Replays ~2,100 synthetic events per match over WebSocket at 1x-100x | `backend/services/match_playback.py` |
+| **1. Ingest** | Replays ~2,100 synthetic events per match over WebSocket at 1x-20x | `backend/services/match_playback.py` |
 | **2. Interpret** | xG, possession, rolling momentum, pressing, Attacking Channels (L/C/R), Set-Piece Threat, Keeper Goals Prevented | `backend/agents/data_agent.py`, `backend/services/story_finder.py` |
 | **3. Discover** | Bundesliga-inspired Data Story Finder (Turning Points, Smash & Grab, Super-Sub, Finishing Woes, Metronome) | `backend/services/story_finder.py` |
 | **4. Explain** | Tactical agent + three pundits (Tactician, Passion, Analyst) + Host debate discovered stories & moments | `backend/agents/` |
@@ -131,7 +131,7 @@ generator → replay engine → Data Agent (deterministic metrics, key moments)
 | Model Context Protocol (MCP) & Foundry | **Implemented** (`backend/mcp_server.py`); standard JSON-RPC & REST tool calling endpoints for Azure AI Foundry and Microsoft Agent Framework |
 | GitHub Actions CI | **Implemented**: automated pytest tests, TypeScript typecheck (`tsc --noEmit`), Vite production build, and Docker validation |
 | Broadcast Overlays & Live 2D Radar | **Implemented**: multilingual overlays (EN/HI/ES), sprint speed indicators, and real-time live ball trajectory radar |
-| Pundit Studio & Fact Verifier | **Implemented**: real-time debate analysis with quantitative verification engine protecting against statistical hallucinations |
+| Pundit Studio & Fact Verifier | **Implemented**: real-time debate analysis with quantitative verification engine and checks supported numerical claims against computed match data and flags incorrect or unverifiable claims |
 
 ## Synthetic Data Compliance (Section 4.7)
 - **100% Synthetic & Fictional**: All teams (e.g. *Synthetic City FC, Metro Stars FC, Thunderstrike United, Aegis Port FC, Ironwall FC, Phoenix Athletic*) and players (e.g. *K. Miyazawa, E. Adetunji, R. Callahan, L. Vance, G. Larsson*) are strictly fictional synthetic entities generated with physics-based xG, pass difficulty, and positional coordinates.
