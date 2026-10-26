@@ -90,9 +90,9 @@ Covers the Data Story Finder (Turning points, Smash & grab, Finishing woes, Supe
 
 `data/generate_matches.py` is a rule-based, seeded simulator with **fictional teams and players**. Three scripted storylines sit on top of a stochastic possession model, so scores are deterministic but play is not:
 
-- **The Great Comeback**: 0-2 down at half-time, wins **3-2** after a tactical switch
-- **Total Domination**: **4-0** with a penalty
-- **The Scrappy Draw**: **2-2** with a red card
+- **Total Domination**: **4-0** with high-pressing low-block dismantle (Thunderstrike United vs Aegis Port FC)
+- **Apex United vs Titan City**: **1-4** on-demand unscripted match with clinical away finishing (middle card on dashboard)
+- **The Great Comeback**: 0-2 down at half-time, wins **3-2** after a tactical switch (Synthetic City FC vs Metro Stars FC)
 
 Each event carries position, outcome, xG, pressure and, for passes and shots, `distance_m`, `ball_speed_kmh` / `shot_speed_kmh` and `pass_difficulty`. Regenerate with `python data/generate_matches.py`.
 
@@ -100,9 +100,9 @@ Realism check of the shipped files (typical football ranges: ~10-15 shots per te
 
 | Match | Events | Shots (H / A) | Passes (H / A) | Pass acc. % (H / A) | xG (H / A) | Fouls | Cards (Y / R) |
 |---|---|---|---|---|---|---|---|
-| Comeback | 2,119 | 10 / 17 | 592 / 622 | 85 / 84 | 0.69 / 1.16 | 34 | 0 / 0 |
-| Dominance | 2,127 | 22 / 12 | 619 / 570 | 82 / 83 | 1.64 / 0.86 | 33 | 0 / 0 |
-| Scrappy draw | 2,118 | 14 / 12 | 560 / 598 | 83 / 84 | 0.84 / 1.34 | 64 | 8 / 1 |
+| Total Domination (4-0) | 2,186 | 22 / 12 | 619 / 570 | 82 / 83 | 1.64 / 0.86 | 33 | 0 / 0 |
+| Apex vs Titan (1-4) | 2,157 | 8 / 19 | 572 / 582 | 80 / 83 | 1.07 / 1.12 | 13 | 4 / 0 |
+| The Comeback (3-2) | 2,119 | 10 / 17 | 592 / 622 | 85 / 84 | 0.69 / 1.16 | 34 | 0 / 0 |
 
 Values are plausible, not calibrated to any real dataset. `data/matches/synthetic_derby.json` is a small hand-written sample; older stub files are in `data/archive/` and are not loaded.
 
