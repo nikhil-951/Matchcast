@@ -21,7 +21,7 @@
 | **1. Ingest** | Replays ~2,100 synthetic events per match over WebSocket at 1x-20x | `backend/services/match_playback.py` |
 | **2. Interpret** | xG, possession, rolling momentum, pressing, Attacking Channels (L/C/R), Set-Piece Threat, Keeper Goals Prevented | `backend/agents/data_agent.py`, `backend/services/story_finder.py` |
 | **3. Discover** | Bundesliga-inspired Data Story Finder (Turning Points, Smash & Grab, Super-Sub, Finishing Woes, Metronome) | `backend/services/story_finder.py` |
-| **4. Explain** | Tactical agent + three pundits (Host, Tactician, Contrarian) debate discovered stories & moments | `backend/agents/` |
+| **4. Explain** | Tactical agent + three pundits (Host ─► Tactician · Passionate Fan · Analyst) debate discovered stories & moments | `backend/agents/` |
 | **5. Render** | Timed machine-readable overlay JSON & live tactical facts drawn as broadcast lower-thirds & stats drawer | `backend/services/overlays.py`, `frontend/src/components/MatchStats.tsx` |
 | **6. Visualise** | Coordinated 22-player collective pitch radar, continuous Sofascore-style player heatmaps with tactical third & flank accuracy, and rolling momentum wave graphs | `frontend/src/components/PitchVisualizer.tsx`, `frontend/src/components/MatchMomentumGraph.tsx` |
 | **7. Personalise** | Language (EN / हिन्दी / ES), audience mode (fan / scout / broadcaster), favourite club, player focus, metric focus | `ProfileBar.tsx`, `POST /api/match/{id}/profile` |
