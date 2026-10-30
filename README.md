@@ -1,4 +1,5 @@
 # ⚽ MatchCast — A Pundit Panel That Shows Its Receipts
+[![M8ven Score](https://m8ven.ai/badge/mcp/nikhil-951-matchcast-rluv0r)](https://m8ven.ai/mcp/nikhil-951-matchcast-rluv0r?s=readme)
 
 [![Live Demo](https://img.shields.io/badge/Live_Demo-Azure_App_Service-0078D4?logo=microsoftazure)](https://matchcast-ai-live.azurewebsites.net)
 [![Demo Video](https://img.shields.io/badge/Demo_Video-01%3A48_(YouTube)-FF0000?logo=youtube)](https://youtu.be/vzoDzdMWAag?si=yObVy5Vmy62gImto)
